@@ -1,0 +1,41 @@
+
+<script>
+      $(document).ready(function(){
+    $(".wish-icon i").click(function(){
+      $(this).toggleClass("fa-heart fa-heart-o");
+    });
+  });
+</script>
+
+<div class="container-xl">
+	<div class="row">
+		<div class="col-md-12 ">
+			<h2>Featured <b class="">Products</b></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+
+			<!-- Wrapper for carousel items -->
+				<div class="item carousel-item active">
+						<div class="row">
+                            <div class="col-sm-4 py-3 px-4" *ngFor="let product of products">
+                              <div class="thumb-wrapper">
+                                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                <div class="img-box">
+                                  <img src="../../../assets/images/SVG/fish.svg" class="img-fluid" alt="">
+                                </div>
+                                <div class="thumb-content">
+                                  <h4>{{ product.name }}</h4>
+                                  <div class="item-price">
+                                    <h4>{{ product.price}}</h4>
+                                    <label>{{ product.comments}}</label>
+                                  </div>
+                                  <button type="button" class="btn" (click)="toto()">Voir plus !!!</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                          
+		        </div>
+			<!-- Carousel controls -->
+		</div>
+		</div>
+	</div>
+</div>
